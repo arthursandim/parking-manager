@@ -1,0 +1,10 @@
+.claude/
+.idea/
+target/
+*.class
+*.jar
+*.log
+node_modules/
+.DS_Store
+*.env
+.vscode/
