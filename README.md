@@ -139,8 +139,7 @@ mvn test jacoco:report
 
 ## 👨‍💻 Autor
 
-Seu Nome
+
 
 ## 📄 Licença
 
-MIT
