@@ -272,33 +272,40 @@ Exemplos:
 
 | Fase | Descrição | Status | Completude |
 |------|-----------|--------|-----------|
-| 1 | Models & Repositories | ⏳ Pronto para começar | 0% |
-| 2 | Services | ⏳ Aguardando Fase 1 | 0% |
+| 1 | Models & Repositories | ✅ Concluída | 100% |
+| 2 | Services | ⏳ Pronto para começar | 0% |
 | 3 | Controllers | ⏳ Aguardando Fase 2 | 0% |
 | 4 | Frontend | ⏳ Aguardando Fase 3 | 0% |
 | 5 | Testes | ⏳ Aguardando Fase 4 | 0% |
 | 6 | Integração | ⏳ Aguardando Fase 5 | 0% |
 | 7 | Finalização | ⏳ Aguardando Fase 6 | 0% |
 
-**Progresso Total**: 5-10% ✅
+**Progresso Total**: 20-25% ✅
 
 ---
 
 ### Arquivos Criados Nesta Sessão
 
 ```
-✅ docs/PLANO_ACAO_2025.md       → Plano detalhado de 30 dias
-✅ docs/CONTEXTO_SESSAO.md        → Este arquivo (para recuperação)
+✅ backend/src/main/java/com/parking/model/Vaga.java
+✅ backend/src/main/java/com/parking/model/Ocupacao.java
+✅ backend/src/main/java/com/parking/repository/VagaRepository.java
+✅ backend/src/main/java/com/parking/repository/OcupacaoRepository.java
 ```
 
-### Arquivos a Criar (FASE 1)
+### Commits Realizados (FASE 1)
 
 ```
-⏳ backend/src/main/java/com/parking/model/Vaga.java
-⏳ backend/src/main/java/com/parking/model/Ocupacao.java
-⏳ backend/src/main/java/com/parking/repository/VagaRepository.java
-⏳ backend/src/main/java/com/parking/repository/OcupacaoRepository.java
+✅ a47e5ee - feat: criar entidades Vaga e Ocupacao com anotações JPA
+✅ 7afab53 - feat: criar VagaRepository com queries customizadas
+✅ c5bc420 - feat: criar OcupacaoRepository com queries customizadas
 ```
+
+### Próxima Fase (FASE 2)
+
+A próxima etapa é criar os **Services** com a lógica de negócio:
+- `VagaService.java` - Serviço para gerenciar vagas
+- `OcupacaoService.java` - Serviço para gerenciar ocupações e cálculos de tarifa
 
 ---
 
