@@ -32,13 +32,13 @@ public interface VagaRepository extends JpaRepository<Vaga, Integer> {
      * Conta quantas vagas estão livres
      * @return número de vagas livres
      */
-    @Query("SELECT COUNT(v) FROM Vaga v WHERE v.status = 'LIVRE'")
+    @Query("SELECT COUNT(v) FROM Vaga v WHERE v.status = com.parking.model.Vaga.StatusVaga.LIVRE")
     long countVagasLivres();
 
     /**
      * Conta quantas vagas estão ocupadas
      * @return número de vagas ocupadas
      */
-    @Query("SELECT COUNT(v) FROM Vaga v WHERE v.status = 'OCUPADA'")
+    @Query("SELECT COUNT(v) FROM Vaga v WHERE v.status = com.parking.model.Vaga.StatusVaga.OCUPADA")
     long countVagasOcupadas();
 }

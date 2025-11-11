@@ -1,8 +1,8 @@
 # 📌 CONTEXTO DE SESSÃO - PARKING MANAGER
 
 **Data de Criação**: 05 de Novembro de 2025
-**Última Atualização**: 05 de Novembro de 2025
-**Status Geral**: Planejamento Concluído - Pronto para Implementação
+**Última Atualização**: 10 de Novembro de 2025
+**Status Geral**: Fase 1 Concluída - Testes Implementados e JaCoCo Corrigido
 
 ---
 
@@ -272,19 +272,19 @@ Exemplos:
 
 | Fase | Descrição | Status | Completude |
 |------|-----------|--------|-----------|
-| 1 | Models & Repositories | ✅ Concluída | 100% |
+| 1 | Models & Repositories & Testes | ✅ Concluída | 100% |
 | 2 | Services | ⏳ Pronto para começar | 0% |
 | 3 | Controllers | ⏳ Aguardando Fase 2 | 0% |
 | 4 | Frontend | ⏳ Aguardando Fase 3 | 0% |
-| 5 | Testes | ⏳ Aguardando Fase 4 | 0% |
+| 5 | Testes Integração/Sistema | ⏳ Aguardando Fase 4 | 0% |
 | 6 | Integração | ⏳ Aguardando Fase 5 | 0% |
 | 7 | Finalização | ⏳ Aguardando Fase 6 | 0% |
 
-**Progresso Total**: 20-25% ✅
+**Progresso Total**: 30-35% ✅
 
 ---
 
-### Arquivos Criados Nesta Sessão
+### Arquivos Criados na Sessão Anterior (FASE 1)
 
 ```
 ✅ backend/src/main/java/com/parking/model/Vaga.java
@@ -293,13 +293,47 @@ Exemplos:
 ✅ backend/src/main/java/com/parking/repository/OcupacaoRepository.java
 ```
 
+### Arquivos Criados Nesta Sessão (10/11/2025)
+
+```
+✅ backend/src/test/java/com/parking/model/VagaTest.java (72 linhas)
+✅ backend/src/test/java/com/parking/model/OcupacaoTest.java (139 linhas)
+✅ backend/src/test/java/com/parking/repository/VagaRepositoryTest.java (142 linhas)
+✅ backend/src/test/java/com/parking/repository/OcupacaoRepositoryTest.java (198 linhas)
+```
+
+**Total de linhas de teste criadas**: 551 linhas
+
 ### Commits Realizados (FASE 1)
 
 ```
+Sessão Anterior (09/11/2025):
 ✅ a47e5ee - feat: criar entidades Vaga e Ocupacao com anotações JPA
 ✅ 7afab53 - feat: criar VagaRepository com queries customizadas
 ✅ c5bc420 - feat: criar OcupacaoRepository com queries customizadas
+
+Sessão Atual (10/11/2025):
+✅ d179be9 - update pom.xml, application.properties
+✅ 4751c00 - docs: atualizar contexto com progresso da Fase 1
+✅ b9ef879 - test: criar testes unitários e de integração para modelos e repositórios
+✅ 756890e - fix: configurar Java 17 e adicionar H2 para testes
 ```
+
+### Problemas Resolvidos Nesta Sessão
+
+1. **Erro JaCoCo com Java 17**
+   - **Problema**: JaCoCo 0.8.10 não é totalmente compatível com Java 17
+   - **Solução**: Atualizar Spring Boot de 3.1.5 para 3.3.6
+   - **Resultado**: Testes agora rodam normalmente no IntelliJ
+
+2. **Compatibilidade Lombok**
+   - **Problema**: Lombok configurado com escopo incorreto
+   - **Solução**: Configurar escopo como `provided` e adicionar maven-compiler-plugin
+   - **Resultado**: Lombok agora processa anotações corretamente
+
+3. **H2 Database para Testes**
+   - **Adicionado**: Dependência H2 para testes unitários
+   - **Benefício**: Testes não dependem de MySQL, rodam em memória
 
 ### Próxima Fase (FASE 2)
 
@@ -383,9 +417,10 @@ assertEquals(StatusVaga.LIVRE, vaga.getStatus());
 
 **Repositório**: `C:\Users\Arthur\Documents\Repositórios\parking-manager`
 **Linguagens**: Java, JavaScript, SQL
-**Framework**: Spring Boot 3.1.5
-**Database**: MySQL 5.7+
-**Build Tool**: Maven 3.6+
+**Framework**: Spring Boot 3.3.6
+**Java**: JDK 17
+**Database**: MySQL 5.7+ (H2 para testes)
+**Build Tool**: Maven 3.9.11
 
 **Documentação**:
 - `README.md` - Overview do projeto
@@ -409,6 +444,6 @@ Antes de começar a codificar:
 
 ---
 
-**Última Modificação**: 05 de Novembro de 2025 às 20:57
-**Versão do Documento**: 1.0
-**Status**: Pronto para retomar desenvolvimento ✅
+**Última Modificação**: 10 de Novembro de 2025 às 22:35
+**Versão do Documento**: 1.1
+**Status**: Fase 1 Concluída - Pronto para Fase 2 (Services) ✅
