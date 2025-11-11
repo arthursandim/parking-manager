@@ -21,6 +21,7 @@ import static org.junit.jupiter.api.Assertions.*;
 @ActiveProfiles("test")
 @DisplayName("Testes do VagaRepository")
 public class VagaRepositoryTest {
+    // Nota: @DataJpaTest cria automaticamente as tabelas via Hibernate (ddl-auto=create-drop)
 
     @Autowired
     private VagaRepository vagaRepository;

@@ -8,6 +8,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.jdbc.Sql;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -22,6 +23,7 @@ import static org.junit.jupiter.api.Assertions.*;
 @ActiveProfiles("test")
 @DisplayName("Testes do OcupacaoRepository")
 public class OcupacaoRepositoryTest {
+    // Nota: @DataJpaTest cria automaticamente as tabelas via Hibernate (ddl-auto=create-drop)
 
     @Autowired
     private OcupacaoRepository ocupacaoRepository;
